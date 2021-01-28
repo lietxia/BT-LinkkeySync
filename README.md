@@ -1,4 +1,4 @@
-# 中文说明
+# macOS蓝牙与windows10同步
 1. 在windows下配对蓝牙设备
 2. 在macOS下配对蓝牙设备
 3. macOS打开终端(Terminal)运行以下脚本（会要求输入密码）

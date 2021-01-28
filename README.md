@@ -27,7 +27,10 @@ It generates a registry file for windows on macOS, which can afterwards be impor
 2. Pair all your bluetooth devices to your Mac (e.g. keyboard, mouse, headphones)
 3. Open the Terminal and run the script with (you will be asked for your password)
    ```
-   curl -o ~/Desktop/BT-LinkkeySync.py https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py && sudo python3 ~/Desktop/BT-LinkkeySync.py
+   cd ~/Desktop/; \
+   curl -o ~/Desktop/BT-LinkkeySync.py \
+   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py \
+   && sudo python3 ~/Desktop/BT-LinkkeySync.py
    ```
 4. Store the generated file `btkeys.reg` file to a location accessible by windows.
 5. Boot windows and close your bluetooth devices

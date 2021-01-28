@@ -1,11 +1,14 @@
 # 中文说明
 1. 在windows下配对蓝牙设备
 2. 在macOS下配对蓝牙设备
-3. macOS打开终端(Terminal)运行以下脚本
+3. macOS打开终端(Terminal)运行以下脚本（会要求输入密码）
    ```
-   curl -o ~/Desktop/BT-LinkkeySync.py https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py && sudo python3 ~/Desktop/BT-LinkkeySync.py
+   cd ~/Desktop/; \
+   curl -o ~/Desktop/BT-LinkkeySync.py \
+   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py \
+   && sudo python3 ~/Desktop/BT-LinkkeySync.py
    ```
-4. 把 `btkeys.reg` 文件放到 windows能访问的目录
+4. 桌面上会产生 `btkeys.reg` ，把他放到 windows能访问的目录
 5. 启动windows，关掉windows的蓝牙
 6. 下载PStools [程序网站](https://docs.microsoft.com/sysinternals/downloads/psexec) or [直接下载](https://download.sysinternals.com/files/PSTools.zip)
    存到 `C:/pstools/` (其他地方也行)

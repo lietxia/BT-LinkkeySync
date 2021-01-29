@@ -1,22 +1,23 @@
 # macOS蓝牙与windows10同步
 1. 在windows下配对蓝牙设备
 2. 在macOS下配对蓝牙设备
-3. macOS打开终端(Terminal)运行以下脚本（会要求输入密码）
+3. macOS打开终端(Terminal)运行以下脚本（3行一起复制，一起粘贴.会要求输入密码）
    ```
-   cd ~/Desktop/; \
-   curl -o ~/Desktop/BT-LinkkeySync.py \
+   cd ~/Desktop/; curl -o BT-LinkkeySync.py \
    https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.1.0/BT-LinkkeySync.py \
-   && sudo python ~/Desktop/BT-LinkkeySync.py
+   && sudo python BT-LinkkeySync.py
    ```
 4. 桌面上会产生 `btkeys.reg` ，把他放到 windows能访问的目录
 5. 启动windows，关掉windows的蓝牙
 6. 下载PStools [程序网站](https://docs.microsoft.com/sysinternals/downloads/psexec) or [直接下载](https://download.sysinternals.com/files/PSTools.zip)
-   存到 `C:/pstools/` (其他地方也行)
-7. 按`windows键`+`X`，弹出菜单选`powershell(管理员模式)`，运行脚本
-   `C:/pstools/psexec.exe -s -i regedit`
+   存到 `C:/pstools/`，保证`C:/pstools/`下面有`psexec.exe` (其他地方也行)
+7. 按`windows键`+`X`，弹出菜单选`powershell(管理员模式)`，运行脚本(如果换了目录，自行把`C:/pstools/`改成相应的目录）
+   ```
+   C:/pstools/psexec.exe -s -i regedit
+   ```
 8. 选`文件`->`导入`把`btkeys.reg`导入进去
 9.  重启win10
-10. 打开蓝牙，你的蓝牙设备就能在双系统娱乐的玩耍了。
+10. 打开蓝牙，你的蓝牙设备就能在双系统愉快的玩耍了。
 
 # BT-LinkkeySync
 Script to synchronize bluetooth link keys from macOS to windows.
@@ -27,10 +28,9 @@ It generates a registry file for windows on macOS, which can afterwards be impor
 2. Pair all your bluetooth devices to your Mac (e.g. keyboard, mouse, headphones)
 3. Open the Terminal and run the script with (you will be asked for your password)
    ```
-   cd ~/Desktop/; \
-   curl -o ~/Desktop/BT-LinkkeySync.py \
+   cd ~/Desktop/; curl -o BT-LinkkeySync.py \
    https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.1.0/BT-LinkkeySync.py \
-   && sudo python ~/Desktop/BT-LinkkeySync.py
+   && sudo python BT-LinkkeySync.py
    ```
 4. Store the generated file `btkeys.reg` file to a location accessible by windows.
 5. Boot windows and close your bluetooth devices

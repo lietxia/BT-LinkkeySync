@@ -5,8 +5,8 @@
    ```
    cd ~/Desktop/; \
    curl -o ~/Desktop/BT-LinkkeySync.py \
-   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py \
-   && sudo python3 ~/Desktop/BT-LinkkeySync.py
+   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.1.0/BT-LinkkeySync.py \
+   && sudo python ~/Desktop/BT-LinkkeySync.py
    ```
 4. 桌面上会产生 `btkeys.reg` ，把他放到 windows能访问的目录
 5. 启动windows，关掉windows的蓝牙
@@ -16,7 +16,7 @@
    `C:/pstools/psexec.exe -s -i regedit`
 8. 选`文件`->`导入`把`btkeys.reg`导入进去
 9.  重启win10
-10. 你的蓝牙设备就能在双系统娱乐的玩耍了。
+10. 打开蓝牙，你的蓝牙设备就能在双系统娱乐的玩耍了。
 
 # BT-LinkkeySync
 Script to synchronize bluetooth link keys from macOS to windows.
@@ -29,14 +29,14 @@ It generates a registry file for windows on macOS, which can afterwards be impor
    ```
    cd ~/Desktop/; \
    curl -o ~/Desktop/BT-LinkkeySync.py \
-   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.0.0/BT-LinkkeySync.py \
-   && sudo python3 ~/Desktop/BT-LinkkeySync.py
+   https://cdn.jsdelivr.net/gh/lietxia/BT-LinkkeySync@1.1.0/BT-LinkkeySync.py \
+   && sudo python ~/Desktop/BT-LinkkeySync.py
    ```
 4. Store the generated file `btkeys.reg` file to a location accessible by windows.
 5. Boot windows and close your bluetooth devices
-6. Download [psexec_website](https://docs.microsoft.com/sysinternals/downloads/psexec) or [direct_download](https://download.sysinternals.com/files/PSTools.zip)
+6. Download PStools [website_download](https://docs.microsoft.com/sysinternals/downloads/psexec) or [direct_download](https://download.sysinternals.com/files/PSTools.zip)
    and store it to `C:/pstools/`
-7. Run the command:
+7. Press `Windows key` + `X` and select powershell (admin). Run the command:
    `C:/pstools/psexec.exe -s -i regedit`
 8. Import the file `btkeys.reg`
 9.  restart windows
@@ -46,9 +46,9 @@ It generates a registry file for windows on macOS, which can afterwards be impor
 Test Environment:
 
 * OSx86 Hackintosh with DW1820A
-* macOS Catalina 10.15.7
+* macOS Catalina 10.15.7/macOS BigSur 11.1
 * Windows 10 20H2
-* Python 3.8
+* Python 3.8/Python 2.7
 
 ## Limitations
 BT 4.0 LE/Smart Devices (e.g. Logitech MX Master) do not work yet.

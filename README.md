@@ -1,4 +1,8 @@
 # macOS蓝牙与windows10同步
+* 应该支持macOS 10.12~macOS11，不过我只测了macOS10.15.7(Catalina)和macOS11.1(BigSur)
+* 同时支持python3和python2，因为python3不是默认装的，这里用python2来示范。
+* **记得点`star`**
+
 1. 在windows下配对蓝牙设备
 2. 在macOS下配对蓝牙设备
 3. macOS打开终端(Terminal)运行以下脚本（3行一起复制，一起粘贴.会要求输入密码）
